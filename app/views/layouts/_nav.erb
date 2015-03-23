@@ -1,0 +1,18 @@
+<div class="navbar navbar-inverse navbar-static-top">
+  <div class="navbar-inner">
+    <div clas="container-fluid">
+      <a class="brand" href="/">YAMMER INITIATIVES</a>
+
+        <ul class="nav pull-right">
+            <li>
+              <%= text_field_tag "search", nil, :class => "span6", :autocomplete => 'off', :placeholder => "Search" %>
+            </li>
+            <% if current_user %>
+              <li><a>@ <%= current_user.permalink %></a></li>
+            <% else %>
+              <li><a href="/auth/yammer">Login with Yammer</a></li>
+            <% end %>
+          </ul>
+    </div>
+  </div>
+</div>

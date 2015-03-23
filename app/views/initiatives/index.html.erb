@@ -1,0 +1,21 @@
+<% @initiatives.each_slice(3).each do |set| %>
+  <div class="row-fluid rowwy">
+    <%= render partial: "initiative", collection: set %>
+  </div>
+<% end %>
+
+
+<% unless @retired_initiatives.blank? %>
+	<h2>Past Inititatives</h2>
+	<% @retired_initiatives.each_slice(3).each do |set| %>
+	  <div class="row-fluid">
+	    <%= render partial: "initiative", collection: set %>
+	  </div>
+	<% end %>
+<% end %>
+
+<script>
+$(document).on('page:load ready', function(){
+  $('.rowwy').equalHeights();
+});
+</script>

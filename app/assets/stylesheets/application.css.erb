@@ -1,0 +1,54 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require bootstrap
+ *= require bootstrap-responsive
+ *= require_tree .
+ *= require_self
+ */
+.navbar-static-top {
+	margin-bottom: 20px;
+}
+
+.brand{
+	background: url(<%= asset_path "icon.png" %>) 50px 0 no-repeat !important;
+	background-repeat: no-repeat;
+	padding-left: 110px !important;
+}
+
+ul{
+	margin:0 !important;
+}
+
+ul#users-list, ul#groups-list{
+	padding:10px 0;
+}
+
+li.user{
+	box-shadow: 2px 2px 10px;
+	display:inline-block;
+	margin-right:10px;
+	width:96px;
+}
+
+.flash{
+	text-align: center;
+}
+
+.twitter-typeahead {
+  width: 100%;
+}
+.typeahead.tt-query {
+  border: none;
+}
+
+ul.mugshots li img {
+	border-radius: 2px;
+}

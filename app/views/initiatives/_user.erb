@@ -1,0 +1,11 @@
+<a href="https://www.yammer.com/microsoft.com/users/<%= user.permalink %>">
+  <section class="user" data-uid="<%= user.id %>">
+	  <div class="user-container">
+	    <%= image_tag user.mugshot(152), :class => 'user-mugshot img-polaroid' %>
+	    <div class="user-mugshot-overlay">
+	      <p><%= user.name %></p>
+	      <p><%= user.title %></p>
+	    </div>
+	  </div>
+	</section>
+</a>

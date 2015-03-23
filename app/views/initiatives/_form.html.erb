@@ -1,0 +1,20 @@
+<%= form_for initiative do |f| %>
+	<div class="form-column">
+		<%= label_tag "Basic Information" %>
+	</div>
+	<div class="form-column">
+		<%= f.text_field :name, :placeholder => "Initiative Name" %>
+	</div>
+	<div class="form-column">
+		<%= f.text_area :description, :placeholder => "Description" %>
+	</div>
+	<div class="form-column">
+		<%= f.date_select :start_date %>
+	</div>
+	<div class="form-column">
+		<%= f.label :tag_list, "Tags (separated by commas)" %>
+		<%= f.text_field :tag_list %>
+	</div>
+
+	<%= f.submit %>
+<% end %>

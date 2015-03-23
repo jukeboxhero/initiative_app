@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>YAMMER INITIATIVES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <%= yield :meta_tags %>
+</head>
+<body data-spy='scroll' data-target='.navbar'>
+
+<% unless flash[:alert].blank? %>
+  <div class="alert alert-error flash"><%= flash[:alert] %></div>
+<% end %>
+
+<% unless flash[:notice].blank? %>
+  <div class="alert alert-success flash"><%= flash[:notice] %></div>
+<% end %>
+
+	<%= render "layouts/nav" %>
+
+  <div class="container-fluid" id="main">
+    <%= yield %>
+  </div>
+
+</body>
+</html>
